@@ -3,18 +3,6 @@ defmodule GBK do
   Documentation for Gbk.
   """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Gbk.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
   def to_utf8(src) do
     to_unicode(src) |> :unicode.characters_to_binary
   end

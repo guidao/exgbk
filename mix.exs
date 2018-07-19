@@ -1,4 +1,4 @@
-defmodule Gbk.MixProject do
+defmodule GBK.MixProject do
   use Mix.Project
 
   def project do
