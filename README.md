@@ -10,8 +10,14 @@ by adding `gbk` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:gbk, "~> 0.1.0"}
+    {:exgbk, "~> 0.1.0"}
   ]
+end
+```
+
+```elixir
+def to_utf8(str) do
+	ExGBK.to_utf8(str)
 end
 ```
 
