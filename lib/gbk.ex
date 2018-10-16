@@ -1,4 +1,4 @@
-defmodule GBK do
+defmodule ExGBK do
   @moduledoc """
   Documentation for Gbk.
   """
