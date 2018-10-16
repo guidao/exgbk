@@ -1,5 +1,8 @@
 defmodule GBK.MixProject do
   use Mix.Project
+  @description """
+  gbk to utf8
+  """
 
   def project do
     [
@@ -7,6 +10,8 @@ defmodule GBK.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
+      description: @description,
+      package: package(),
       deps: deps()
     ]
   end
@@ -21,9 +26,18 @@ defmodule GBK.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
-      {:httpoison, "~> 1.2.0"}
+      {:ex_doc, ">= 0.0.0", only: :dev},
+      {:httpoison, "~> 1.2.0", only: :dev}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["guidao"],
+      licenses: ["MIT"],
+      links: %{
+        GitHub: "https://github.com/guidao/exgbk"
+      }
     ]
   end
 end
